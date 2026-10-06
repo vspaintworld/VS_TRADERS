@@ -7,520 +7,728 @@
 <title>VS Traders | Paints & Painting Materials</title>
 
 <meta name="description"
-content="VS Traders - Paints, painting materials, rollers, brushes, putty, sealers, damp proofing and complete painting solutions.">
+content="VS Traders - Quality paints, painting materials, brushes, rollers, putty, sealers, damp proofing, paint removers and complete painting solutions in Malayadi, Palugal.">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#071018;
-    color:#fff;
-    line-height:1.6;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #071018;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-:root{
-    --gold:#f5b400;
-    --gold2:#ffc928;
-    --dark:#071018;
-    --dark2:#0c1720;
-    --card:#101e29;
-    --white:#ffffff;
-    --muted:#aeb8c2;
+:root {
+    --gold: #f5b400;
+    --gold-light: #ffd34d;
+    --dark: #071018;
+    --dark-2: #0b1720;
+    --card: #101e29;
+    --white: #ffffff;
+    --muted: #aeb9c3;
 }
 
-/* NAVBAR */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:999;
-    padding:18px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(7,16,24,.88);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 6%;
+
+    background: rgba(5, 12, 18, 0.88);
+    backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.logo{
-    font-size:27px;
-    font-weight:900;
-    letter-spacing:1px;
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 
-.logo span{
-    color:var(--gold);
+.logo span {
+    color: var(--gold);
 }
 
-.nav-links{
-    display:flex;
-    gap:28px;
-    list-style:none;
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
 }
 
-.nav-links a{
-    color:#fff;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:600;
-    transition:.3s;
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.nav-links a:hover{
-    color:var(--gold);
+.nav-links a:hover {
+    color: var(--gold);
 }
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
-.hero{
-    min-height:100vh;
-    padding:130px 6% 70px;
-    display:grid;
-    grid-template-columns:1fr 1.05fr;
-    gap:55px;
-    align-items:center;
+.hero {
+    min-height: 100vh;
+
+    padding: 135px 6% 75px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 60px;
+
     background:
-    radial-gradient(circle at 15% 20%,rgba(245,180,0,.12),transparent 30%),
-    linear-gradient(135deg,#071018,#0c1923);
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(245,180,0,0.13),
+            transparent 30%
+        ),
+        linear-gradient(135deg, #071018, #0c1923);
 }
 
-.hero-content{
-    animation:fadeUp 1s ease;
+.hero-content {
+    animation: fadeUp 1s ease;
 }
 
-.small-title{
-    color:var(--gold);
-    font-size:14px;
-    letter-spacing:4px;
-    font-weight:bold;
-    margin-bottom:18px;
+.hero-label {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
 }
 
-.hero h1{
-    font-size:clamp(48px,6vw,82px);
-    line-height:1;
-    margin-bottom:25px;
+.hero h1 {
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 0.98;
+    margin-bottom: 25px;
 }
 
-.hero h1 span{
-    color:var(--gold);
+.hero h1 span {
+    color: var(--gold);
 }
 
-.hero p{
-    color:var(--muted);
-    font-size:18px;
-    max-width:600px;
-    margin-bottom:35px;
+.hero-description {
+    max-width: 600px;
+    color: var(--muted);
+    font-size: 18px;
+    margin-bottom: 35px;
 }
 
-.buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
-.btn{
-    padding:14px 24px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-    display:inline-block;
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn-primary{
-    background:var(--gold);
-    color:#111;
+.btn-primary {
+    background: var(--gold);
+    color: #111;
 }
 
-.btn-primary:hover{
-    transform:translateY(-3px);
-    background:var(--gold2);
+.btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
 }
 
-.btn-outline{
-    border:1px solid rgba(255,255,255,.3);
-    color:white;
+.btn-outline {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
 }
 
-.btn-outline:hover{
-    border-color:var(--gold);
-    color:var(--gold);
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-3px);
 }
 
-.hero-image{
-    position:relative;
+.hero-image {
+    position: relative;
 }
 
-.hero-image img{
-    width:100%;
-    height:580px;
-    object-fit:cover;
-    border-radius:28px;
-    display:block;
-    box-shadow:0 30px 80px rgba(0,0,0,.55);
-    transition:.6s;
+.hero-image img {
+    width: 100%;
+    height: 590px;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,0.55);
+
+    transition: transform 0.6s ease;
 }
 
-.hero-image:hover img{
-    transform:scale(1.015);
+.hero-image:hover img {
+    transform: scale(1.015);
 }
 
-/* SECTIONS */
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
 
-section{
-    padding:100px 6%;
+section {
+    padding: 105px 6%;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:55px;
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
 }
 
-.section-title span{
-    color:var(--gold);
-    font-size:13px;
-    font-weight:bold;
-    letter-spacing:3px;
+.section-heading span {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
-.section-title h2{
-    font-size:clamp(34px,4vw,52px);
-    margin-top:10px;
+.section-heading h2 {
+    font-size: clamp(34px, 4vw, 54px);
+    margin-top: 8px;
 }
 
-.section-title p{
-    max-width:650px;
-    margin:15px auto 0;
-    color:var(--muted);
+.section-heading p {
+    max-width: 680px;
+    margin: 15px auto 0;
+    color: var(--muted);
 }
 
-/* PRODUCTS */
+/* =========================================================
+   PRODUCTS
+========================================================= */
 
-.products{
-    background:#0a151e;
+.products {
+    background: #0a151e;
 }
 
-.product-image{
-    max-width:1250px;
-    margin:auto;
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 30px 70px rgba(0,0,0,.45);
+.large-image {
+    max-width: 1300px;
+    margin: auto;
+
+    overflow: hidden;
+    border-radius: 25px;
+
+    box-shadow: 0 30px 70px rgba(0,0,0,0.45);
 }
 
-.product-image img{
-    width:100%;
-    display:block;
-    transition:.6s;
+.large-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.7s ease;
 }
 
-.product-image:hover img{
-    transform:scale(1.02);
+.large-image:hover img {
+    transform: scale(1.02);
 }
 
-/* CARDS */
+/* =========================================================
+   PRODUCT CARDS
+========================================================= */
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+.product-grid {
+    margin-top: 45px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
 }
 
-.card{
-    background:linear-gradient(145deg,#10202c,#0b151d);
-    padding:32px;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
-    transition:.4s;
+.product-card {
+    padding: 27px;
+
+    background: linear-gradient(
+        145deg,
+        #11222e,
+        #0b151d
+    );
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+
+    transition: 0.4s;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(245,180,0,.5);
-    box-shadow:0 20px 50px rgba(0,0,0,.3);
+.product-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(245,180,0,0.5);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.3);
 }
 
-.icon{
-    width:55px;
-    height:55px;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(245,180,0,.12);
-    color:var(--gold);
-    font-size:25px;
-    margin-bottom:20px;
+.product-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-.card h3{
-    margin-bottom:10px;
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
 }
 
-.card p{
-    color:var(--muted);
-    font-size:14px;
+.product-card p {
+    color: var(--muted);
+    font-size: 14px;
 }
 
-/* SERVICES IMAGE */
+/* =========================================================
+   SERVICES
+========================================================= */
 
-.services-image{
-    margin-top:55px;
-    max-width:1250px;
-    margin-left:auto;
-    margin-right:auto;
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 30px 70px rgba(0,0,0,.45);
+.services {
+    background: #071018;
 }
 
-.services-image img{
-    width:100%;
-    display:block;
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
-/* BRANDS */
+.service-card {
+    padding: 32px;
 
-.brands{
-    background:#071018;
+    background: linear-gradient(
+        145deg,
+        #10202c,
+        #0b151d
+    );
+
+    border-radius: 21px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.4s;
 }
 
-.brand-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(245,180,0,0.5);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
 }
 
-.brand{
-    min-height:150px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    text-align:center;
-    background:#101d27;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
-    transition:.3s;
+.service-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(245,180,0,0.12);
+    color: var(--gold);
+
+    border-radius: 15px;
+
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
-.brand:hover{
-    transform:translateY(-5px);
-    border-color:var(--gold);
+.service-card h3 {
+    margin-bottom: 10px;
 }
 
-.brand strong{
-    font-size:22px;
-    margin-bottom:8px;
+.service-card p {
+    color: var(--muted);
+    font-size: 14px;
 }
 
-.brand small{
-    color:var(--gold);
+.service-image {
+    max-width: 1300px;
+    margin: 60px auto 0;
+
+    overflow: hidden;
+    border-radius: 25px;
+
+    box-shadow: 0 30px 70px rgba(0,0,0,0.45);
 }
 
-/* GALLERY */
-
-.gallery{
-    background:#0a151e;
+.service-image img {
+    width: 100%;
+    display: block;
 }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+/* =========================================================
+   BRANDS
+========================================================= */
+
+.brands {
+    background: #0a151e;
 }
 
-.gallery-grid img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:20px;
-    transition:.5s;
+.brand-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.gallery-grid img:hover{
-    transform:scale(1.025);
+.brand-card {
+    min-height: 165px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #101e29;
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.35s;
 }
 
-/* CONTACT */
+.brand-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
 
-.contact{
+.brand-name {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.brand-status {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
+
+.highlight {
+    padding: 45px 6%;
+
+    background: var(--gold);
+    color: #111;
+
+    text-align: center;
+}
+
+.highlight h2 {
+    font-size: clamp(25px, 4vw, 40px);
+    margin-bottom: 8px;
+}
+
+.highlight p {
+    font-weight: 600;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery {
+    background: #071018;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 340px;
+
+    object-fit: cover;
+    display: block;
+
+    transition: 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
     background:
-    radial-gradient(circle at 80% 30%,rgba(245,180,0,.10),transparent 35%),
-    #071018;
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(245,180,0,0.10),
+            transparent 35%
+        ),
+        #0a151e;
 }
 
-.contact-box{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+.contact-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
 }
 
-.contact-card{
-    background:#101d27;
-    padding:30px;
-    border-radius:20px;
-    border:1px solid rgba(255,255,255,.08);
+.contact-card {
+    background: #101e29;
+
+    padding: 32px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
-.contact-card h3{
-    color:var(--gold);
-    margin-bottom:10px;
+.contact-card h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
 }
 
-.contact-card p{
-    color:var(--muted);
+.contact-card p {
+    color: var(--muted);
 }
 
-.contact-actions{
-    margin-top:30px;
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
 }
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+========================================================= */
 
-footer{
-    padding:30px 6%;
-    text-align:center;
-    background:#050b10;
-    color:#7f8a94;
-    font-size:13px;
+footer {
+    padding: 30px 6%;
+
+    background: #050b10;
+
+    text-align: center;
+
+    color: #7f8a94;
+
+    font-size: 13px;
 }
 
-footer strong{
-    color:var(--gold);
+footer strong {
+    color: var(--gold);
 }
 
-/* ANIMATION */
+/* =========================================================
+   ANIMATION
+========================================================= */
 
-.reveal{
-    opacity:0;
-    transform:translateY(30px);
-    transition:1s ease;
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
 
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(30px);
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+
 }
 
-/* MOBILE */
+/* =========================================================
+   TABLET
+========================================================= */
 
-@media(max-width:900px){
+@media (max-width: 1000px) {
 
-    .nav-links{
-        display:none;
+    .hero {
+        grid-template-columns: 1fr;
     }
 
-    .hero{
-        grid-template-columns:1fr;
-        padding-top:120px;
+    .hero-image img {
+        height: 500px;
     }
 
-    .hero-image img{
-        height:420px;
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .cards{
-        grid-template-columns:1fr 1fr;
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .brand-grid{
-        grid-template-columns:1fr 1fr;
+    .brand-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .gallery-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .contact-box{
-        grid-template-columns:1fr;
-    }
 }
 
-@media(max-width:600px){
+/* =========================================================
+   MOBILE
+========================================================= */
 
-    section{
-        padding:75px 5%;
+@media (max-width: 700px) {
+
+    nav {
+        padding: 16px 5%;
     }
 
-    .hero{
-        padding-left:5%;
-        padding-right:5%;
+    .nav-links {
+        display: none;
     }
 
-    .hero h1{
-        font-size:48px;
+    section {
+        padding: 75px 5%;
     }
 
-    .hero p{
-        font-size:16px;
+    .hero {
+        padding: 120px 5% 60px;
+        gap: 40px;
     }
 
-    .hero-image img{
-        height:300px;
+    .hero h1 {
+        font-size: 50px;
     }
 
-    .cards{
-        grid-template-columns:1fr;
+    .hero-description {
+        font-size: 16px;
     }
 
-    .brand-grid{
-        grid-template-columns:1fr 1fr;
+    .hero-image img {
+        height: 330px;
+        border-radius: 20px;
     }
 
-    .gallery-grid{
-        grid-template-columns:1fr;
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 
-    .gallery-grid img{
-        height:250px;
+    .service-grid {
+        grid-template-columns: 1fr;
     }
 
-    .contact-actions{
-        flex-direction:column;
+    .brand-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .contact-actions .btn{
-        text-align:center;
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
+
+    .gallery-item img {
+        height: 280px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons .btn {
+        text-align: center;
+    }
+
+    .large-image,
+    .service-image {
+        border-radius: 18px;
+    }
+
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
 }
 
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <nav>
 
@@ -529,129 +737,163 @@ footer strong{
     </div>
 
     <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#brands">Brands</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#products">Products</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#brands">Brands</a>
+        </li>
+
+        <li>
+            <a href="#gallery">Gallery</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
     </ul>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero" id="home">
 
     <div class="hero-content">
 
-        <div class="small-title">
+        <div class="hero-label">
             PAINTS • MATERIALS • SOLUTIONS
         </div>
 
         <h1>
-            Bring Your<br>
-            Space <span>To Life.</span>
+            Bring Your
+            <br>
+            Space
+            <span>To Life.</span>
         </h1>
 
-        <p>
-            Your one-stop destination for quality paints,
-            painting materials, tools and complete surface
-            solutions.
+        <p class="hero-description">
+
+            Your trusted destination for quality paints,
+            painting materials, professional tools and
+            complete surface solutions.
+
         </p>
 
-        <div class="buttons">
+        <div class="hero-buttons">
 
-            <a href="#products" class="btn btn-primary">
+            <a
+                href="#products"
+                class="btn btn-primary">
+
                 Explore Products
+
             </a>
 
-            <a href="#contact" class="btn btn-outline">
+            <a
+                href="#contact"
+                class="btn btn-outline">
+
                 Contact Us
+
             </a>
 
         </div>
 
     </div>
 
+
     <div class="hero-image">
 
         <img
-        src="main%20img.jpeg"
-        alt="VS Traders Paint and Painting Materials Shop">
+            src="main%20img.jpeg"
+            alt="VS Traders Shop">
 
     </div>
 
 </section>
 
 
-<!-- PRODUCTS -->
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
 
-<section class="products reveal" id="products">
+<section
+    class="products reveal"
+    id="products">
 
-    <div class="section-title">
+    <div class="section-heading">
 
-        <span>WHAT WE OFFER</span>
+        <span>OUR PRODUCTS</span>
 
-        <h2>Everything You Need</h2>
+        <h2>
+            Everything You Need
+        </h2>
 
         <p>
-            From premium paints to professional painting
-            tools and surface-care products.
+
+            From premium paints and finishes to
+            professional painting tools and
+            surface-care products.
+
         </p>
 
     </div>
 
-    <div class="product-image">
+
+    <div class="large-image">
 
         <img
-        src="img%202.jpg"
-        alt="VS Traders Paints and Painting Products">
+            src="img%202.jpg"
+            alt="VS Traders Paints and Painting Products">
 
     </div>
 
-</section>
+
+    <div class="product-grid">
 
 
-<!-- SERVICES -->
+        <div class="product-card reveal">
 
-<section id="services">
+            <div class="product-icon">
+                🎨
+            </div>
 
-    <div class="section-title">
-
-        <span>OUR SOLUTIONS</span>
-
-        <h2>Complete Painting Solutions</h2>
-
-        <p>
-            Quality products for every stage of your
-            painting and surface preparation work.
-        </p>
-
-    </div>
-
-    <div class="cards">
-
-        <div class="card reveal">
-
-            <div class="icon">🎨</div>
-
-            <h3>Interior & Exterior Paints</h3>
+            <h3>
+                Berger Paints
+            </h3>
 
             <p>
-                Premium paints for walls, ceilings,
-                interiors and exterior surfaces.
+                Interior and exterior paints,
+                emulsions, enamels and finishes.
             </p>
 
         </div>
 
 
-        <div class="card reveal">
+        <div class="product-card reveal">
 
-            <div class="icon">🪣</div>
+            <div class="product-icon">
+                🪣
+            </div>
 
-            <h3>Berger Putty & Sealers</h3>
+            <h3>
+                Berger Putty & Sealers
+            </h3>
 
             <p>
                 Wall putty, sealers, primers and
@@ -661,39 +903,51 @@ footer strong{
         </div>
 
 
-        <div class="card reveal">
+        <div class="product-card reveal">
 
-            <div class="icon">💧</div>
+            <div class="product-icon">
+                🎨
+            </div>
 
-            <h3>Damp Proofing</h3>
+            <h3>
+                Indigo Paints
+            </h3>
 
             <p>
-                Waterproofing and damp-proofing solutions
-                for walls and exposed surfaces.
+                Quality interior, exterior and
+                specialty paint solutions.
             </p>
 
         </div>
 
 
-        <div class="card reveal">
+        <div class="product-card reveal">
 
-            <div class="icon">🖌️</div>
+            <div class="product-icon">
+                🖌️
+            </div>
 
-            <h3>Brushes & Rollers</h3>
+            <h3>
+                Arun Brushes
+            </h3>
 
             <p>
-                All types of brushes, rollers,
-                roller covers and painting accessories.
+                Paint brushes, roller brushes and
+                professional painting accessories.
             </p>
 
         </div>
 
 
-        <div class="card reveal">
+        <div class="product-card reveal">
 
-            <div class="icon">🛠️</div>
+            <div class="product-icon">
+                🧰
+            </div>
 
-            <h3>Painting Tools</h3>
+            <h3>
+                Painting Tools
+            </h3>
 
             <p>
                 Scrapers, putty knives, trays,
@@ -703,15 +957,200 @@ footer strong{
         </div>
 
 
-        <div class="card reveal">
+        <div class="product-card reveal">
 
-            <div class="icon">✨</div>
+            <div class="product-icon">
+                🖌️
+            </div>
 
-            <h3>Paint Removers</h3>
+            <h3>
+                Rollers & Covers
+            </h3>
 
             <p>
-                Products for removing old paint,
-                cleaning surfaces and preparation.
+                Different types of rollers,
+                roller covers and accessories.
+            </p>
+
+        </div>
+
+
+        <div class="product-card reveal">
+
+            <div class="product-icon">
+                💧
+            </div>
+
+            <h3>
+                Damp Proofing
+            </h3>
+
+            <p>
+                Waterproofing and damp-proofing
+                products for surface protection.
+            </p>
+
+        </div>
+
+
+        <div class="product-card reveal">
+
+            <div class="product-icon">
+                🧴
+            </div>
+
+            <h3>
+                Paint Removers
+            </h3>
+
+            <p>
+                Paint removers and surface
+                cleaning solutions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section
+    class="services"
+    id="services">
+
+    <div class="section-heading">
+
+        <span>OUR SERVICES</span>
+
+        <h2>
+            Complete Painting Solutions
+        </h2>
+
+        <p>
+            Everything from surface preparation
+            to the final coat.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <div class="service-card reveal">
+
+            <div class="service-icon">
+                🎨
+            </div>
+
+            <h3>
+                Interior & Exterior Painting
+            </h3>
+
+            <p>
+                Products for interior walls,
+                exterior walls, ceilings and
+                different surface requirements.
+            </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+            <div class="service-icon">
+                🪣
+            </div>
+
+            <h3>
+                Putty & Surface Preparation
+            </h3>
+
+            <p>
+                Putty, fillers, primers, sealers
+                and products for preparing surfaces
+                before painting.
+            </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+            <div class="service-icon">
+                💧
+            </div>
+
+            <h3>
+                Damp & Waterproofing
+            </h3>
+
+            <p>
+                Solutions for damp walls,
+                water exposure and waterproofing
+                requirements.
+            </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+            <div class="service-icon">
+                🖌️
+            </div>
+
+            <h3>
+                Brushes & Rollers
+            </h3>
+
+            <p>
+                Different types of brushes,
+                rollers, roller covers and
+                painting accessories.
+            </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+            <div class="service-icon">
+                🛠️
+            </div>
+
+            <h3>
+                Professional Painting Tools
+            </h3>
+
+            <p>
+                Scrapers, spatulas, trays,
+                sandpaper, masking products
+                and other useful tools.
+            </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+            <div class="service-icon">
+                ✨
+            </div>
+
+            <h3>
+                Surface Care
+            </h3>
+
+            <p>
+                Paint removers, cleaners,
+                sealants and other surface
+                maintenance products.
             </p>
 
         </div>
@@ -719,26 +1158,32 @@ footer strong{
     </div>
 
 
-    <div class="services-image">
+    <div class="service-image">
 
         <img
-        src="img%203.png"
-        alt="VS Traders Services and Painting Materials">
+            src="img%203.png"
+            alt="VS Traders Services and Painting Materials">
 
     </div>
 
 </section>
 
 
-<!-- BRANDS -->
+<!-- =====================================================
+     BRANDS
+===================================================== -->
 
-<section class="brands" id="brands">
+<section
+    class="brands"
+    id="brands">
 
-    <div class="section-title">
+    <div class="section-heading">
 
         <span>TRUSTED BRANDS</span>
 
-        <h2>Authorized Dealer Brands</h2>
+        <h2>
+            Our Authorized Brands
+        </h2>
 
         <p>
             Genuine products from trusted brands.
@@ -749,44 +1194,100 @@ footer strong{
 
     <div class="brand-grid">
 
-        <div class="brand reveal">
-            <strong>BERGER</strong>
-            <small>Authorized Dealer</small>
+
+        <div class="brand-card reveal">
+
+            <div class="brand-name">
+                BERGER PAINTS
+            </div>
+
+            <div class="brand-status">
+                AUTHORIZED DEALER
+            </div>
+
         </div>
 
-        <div class="brand reveal">
-            <strong>INDIGO</strong>
-            <small>Authorized Dealer</small>
+
+        <div class="brand-card reveal">
+
+            <div class="brand-name">
+                INDIGO PAINTS
+            </div>
+
+            <div class="brand-status">
+                AUTHORIZED DEALER
+            </div>
+
         </div>
 
-        <div class="brand reveal">
-            <strong>ARUN BRUSH</strong>
-            <small>Authorized Dealer</small>
+
+        <div class="brand-card reveal">
+
+            <div class="brand-name">
+                ARUN BRUSH
+            </div>
+
+            <div class="brand-status">
+                AUTHORIZED DEALER
+            </div>
+
         </div>
 
-        <div class="brand reveal">
-            <strong>HAVELLS</strong>
-            <small>Authorized Dealer</small>
+
+        <div class="brand-card reveal">
+
+            <div class="brand-name">
+                HAVELLS
+            </div>
+
+            <div class="brand-status">
+                AUTHORIZED DEALER
+            </div>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- GALLERY -->
+<!-- =====================================================
+     HIGHLIGHT
+===================================================== -->
 
-<section class="gallery" id="gallery">
+<div class="highlight">
 
-    <div class="section-title">
+    <h2>
+        Quality Brands • Genuine Products • Expert Guidance
+    </h2>
+
+    <p>
+        Everything you need for a perfect finish,
+        all under one roof.
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section
+    class="gallery"
+    id="gallery">
+
+    <div class="section-heading">
 
         <span>OUR STORE</span>
 
-        <h2>Explore VS Traders</h2>
+        <h2>
+            Explore VS Traders
+        </h2>
 
         <p>
-            A glimpse of our shop, products and
-            painting solutions.
+            Our shop, products and painting solutions.
         </p>
 
     </div>
@@ -794,78 +1295,97 @@ footer strong{
 
     <div class="gallery-grid">
 
-        <img
-        src="main%20img.jpeg"
-        alt="VS Traders Shop">
 
-        <img
-        src="img%202.jpg"
-        alt="VS Traders Products">
+        <div class="gallery-item reveal">
 
-        <img
-        src="img%203.png"
-        alt="VS Traders Painting Materials and Services">
+            <img
+                src="main%20img.jpeg"
+                alt="VS Traders Shop">
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="img%202.jpg"
+                alt="VS Traders Products">
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="img%203.png"
+                alt="VS Traders Painting Materials">
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
-<section class="contact" id="contact">
+<section
+    class="contact"
+    id="contact">
 
-    <div class="section-title">
+    <div class="section-heading">
 
         <span>GET IN TOUCH</span>
 
-        <h2>Visit VS Traders</h2>
+        <h2>
+            Visit VS Traders
+        </h2>
 
         <p>
-            Looking for paints, painting materials or
-            surface solutions? Get in touch with us.
+            Looking for paints, painting materials
+            or surface solutions? Contact us.
         </p>
 
     </div>
 
 
-    <div class="contact-box">
-
-        <div class="contact-card">
-
-            <h3>📍 Visit Our Shop</h3>
-
-            <p>
-                Your exact shop address goes here.
-            </p>
-
-        </div>
+    <div class="contact-grid">
 
 
-        <div class="contact-card">
+        <!-- SHOP LOCATION -->
 
-            <h3>📞 Contact</h3>
+        <div class="contact-card reveal">
+
+            <h3>
+                📍 Shop Location
+            </h3>
 
             <p>
-                Phone: +91 XXXXX XXXXX
-                <br><br>
-                WhatsApp: +91 XXXXX XXXXX
+
+                <strong>VS Traders</strong>
+                <br>
+                Kaliakkavilai – Moovottukonam Road
+                <br>
+                Malayadi, Palugal Post
+                <br>
+                Tamil Nadu – 629153
+
             </p>
 
-            <div class="contact-actions">
 
-                <!-- CHANGE THESE NUMBERS -->
-
-                <a
-                href="tel:+919999999999"
-                class="btn btn-primary">
-                    Call Us
-                </a>
+            <div class="contact-buttons">
 
                 <a
-                href="https://wa.me/919999999999"
-                class="btn btn-outline">
-                    WhatsApp
+                    href="https://maps.app.goo.gl/XNwgjEkVUosHhxLK6"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-primary">
+
+                    View on Google Maps
+
                 </a>
 
             </div>
@@ -873,87 +1393,167 @@ footer strong{
         </div>
 
 
-        <div class="contact-card">
+        <!-- PHONE & WHATSAPP -->
 
-            <h3>🕐 Opening Hours</h3>
+        <div class="contact-card reveal">
+
+            <h3>
+                📞 Contact Us
+            </h3>
 
             <p>
-                Monday – Saturday<br>
-                9:00 AM – 8:00 PM
+
+                Phone:
+                <strong>+91 96779 06793</strong>
+
                 <br><br>
-                Sunday<br>
-                Add your timing
+
+                WhatsApp:
+                <strong>+91 96779 06793</strong>
+
             </p>
+
+
+            <div class="contact-buttons">
+
+
+                <!-- CALL -->
+
+                <a
+                    href="tel:+919677906793"
+                    class="btn btn-primary">
+
+                    Call Us
+
+                </a>
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    href="https://wa.me/919677906793?text=Hello%20VS%20Traders%2C%20I%20would%20like%20to%20know%20about%20your%20paints%20and%20painting%20materials."
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-outline">
+
+                    WhatsApp Us
+
+                </a>
+
+
+            </div>
 
         </div>
 
 
-        <div class="contact-card">
+        <!-- OPENING HOURS -->
 
-            <h3>🎨 What We Provide</h3>
+        <div class="contact-card reveal">
+
+            <h3>
+                🕐 Opening Hours
+            </h3>
 
             <p>
-                Paints • Putty • Sealers • Rollers •
-                Brushes • Damp Proofing • Paint Removers •
-                Painting Tools • Surface Solutions
+
+                8:00 AM – 9:00 PM
+
             </p>
 
         </div>
+
+
+        <!-- PRODUCTS -->
+
+        <div class="contact-card reveal">
+
+            <h3>
+                🎨 What We Provide
+            </h3>
+
+            <p>
+
+                Berger Paints • Indigo Paints •
+                Berger Putty • Berger Sealers •
+                Arun Brushes • Rollers •
+                Damp Proofing • Paint Removers •
+                Painting Tools • Surface Solutions
+
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
     © <span id="year"></span>
-    <strong>VS TRADERS</strong>.
+
+    <strong>VS TRADERS</strong>
+
+    — Paints & Painting Materials.
+
     All Rights Reserved.
 
 </footer>
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-/* YEAR */
+/* CURRENT YEAR */
 
 document.getElementById("year").textContent =
-new Date().getFullYear();
+    new Date().getFullYear();
 
 
 /* SCROLL REVEAL */
 
-const observer = new IntersectionObserver(
+const observer =
+    new IntersectionObserver(
 
-    entries => {
+        (entries) => {
 
-        entries.forEach(entry => {
+            entries.forEach((entry) => {
 
-            if(entry.isIntersecting){
+                if (entry.isIntersecting) {
 
-                entry.target.classList.add("active");
+                    entry.target.classList.add("active");
 
-            }
+                }
 
-        });
+            });
 
-    },
+        },
 
-    {
-        threshold:0.12
-    }
+        {
+            threshold: 0.12
+        }
 
-);
+    );
 
 
-document.querySelectorAll(".reveal").forEach(
-    element => observer.observe(element)
-);
+document
+    .querySelectorAll(".reveal")
+    .forEach((element) => {
+
+        observer.observe(element);
+
+    });
 
 </script>
+
 
 </body>
 </html>
